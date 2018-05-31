@@ -47,7 +47,7 @@
 
     <div th:if="${jobs} and ${jobs.size()}">
 
-        <h3>Results</h3>
+        <h3 th:text="${jobs.size()} + ' Result(s)'">Results</h3>
         <table class="job-listing" th:each="jobEntry : ${jobs}">
             <tr th:each="job : ${jobEntry}">
                 <td th:text="${job.key}"></td>
