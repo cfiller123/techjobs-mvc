@@ -50,7 +50,7 @@
         <h3 th:text="${jobs.size()} + ' Result(s)'">Results</h3>
         <table class="job-listing" th:each="jobEntry : ${jobs}">
             <tr th:each="job : ${jobEntry}">
-                <td th:text="${job.key}"></td>
+                <td th:text="${#strings.capitalize(job.key)}"></td>
                 <td th:text="${job.value}"></td>
             </tr>
         </table>
